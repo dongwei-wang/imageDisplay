@@ -1,7 +1,8 @@
-todo: all
+BIN := imageDisplay
+SRC_FILE = imageDisplay.cpp
 
-all: src.cpp
-	g++ src.cpp -o exe `pkg-config --cflags --libs opencv`
+all: $(SRC_FILE)
+	g++ $(SRC_FILE) -o $(BIN) `pkg-config --cflags --libs opencv`
 
 clean:
-	rm -rf exe tags
+	rm -rf $(BIN) tags
